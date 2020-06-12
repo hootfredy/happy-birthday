@@ -15,7 +15,7 @@ body {
   z-index: 10;
 }
 
-#card, #card-front, #card-inside {
+#card, #card-front {
   height: 580px;
 }
 
@@ -23,13 +23,15 @@ body {
   padding: 1.5em 2.5em;
   height: 100%;
 }
+.photo-wrap {
+  min-height: 500px;
+}
 
 #card-front, #card-inside {
-  width: 50%;
+  width: 100%;
   -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 50%;
 }
 
 #card-inside .wrap {
@@ -39,7 +41,7 @@ body {
 }
 
 #card {
-  width: 960px;
+  width: 100%;
   margin: auto;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -65,6 +67,15 @@ body {
   font-size: 70px;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15), 1px 1px 0 #ffc8c8, 2px 2px 0 #ff9696, 3px 3px 0 #ff7d7d;
   color: #FFF;
+}
+
+.happy-birthday-title {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+}
+.happy-birthday-name {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
 }
 
 #card-inside {
@@ -94,42 +105,10 @@ font-family: 'Indie Flower', cursive;
   background-color: #ee9ca7;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF5555), to(#FF7777));
   background-image: linear-gradient(top, #FF5555 0%, #FF7777 100%);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: -webkit-transform 1s linear;
-  transition: -webkit-transform 1s linear;
-  transition: transform 1s linear;
-  transition: transform 1s linear, -webkit-transform 1s linear;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-perspective: 5000px;
-          perspective: 5000px;
-}
-
-#card-front:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  background-color: #444;
-  -webkit-transform: translateZ(-1px);
-          transform: translateZ(-1px);
-}
-
-#card-front .wrap {
-  -webkit-transition: background 1s linear;
-  transition: background 1s linear;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 
 #card-front button {
-  position: absolute;
-  bottom: 1em;
-  right: -12px;
+  margin-top: 260px;
   background: #F44;
   color: #FFF;
   font-family: 'Lobster', cursive;
@@ -351,7 +330,7 @@ font-family: 'Lobster', cursive;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70%;
+  height: 100%;
   width: 80%;
   margin: auto;
   -webkit-backface-visibility: hidden;
@@ -377,8 +356,8 @@ font-family: 'Lobster', cursive;
 }
 
 .polaroid {
-  width: 240x;
-  height: 300px;
+  width: 100%;
+  height: 400px;
   position: absolute;
   float: left;
   background: #1e1c18;
@@ -404,8 +383,8 @@ font-family: 'Lobster', cursive;
           backface-visibility: hidden;
   background-position: center;
   background-size: cover;
-  -webkit-animation: fade-in 20s ease-in;
-          animation: fade-in 20s ease-in;
+  -webkit-animation: fade-in 5s ease-in;
+          animation: fade-in 5s ease-in;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
